@@ -1,12 +1,12 @@
 {
-    "name": "Player Controls",
+    "name": "WASDArrows",
     "maps": [
         {
-            "name": "PlayerControls",
+            "name": "WASDArrows",
             "id": "c2036492-cd63-4528-929b-96a23fce8410",
             "actions": [
                 {
-                    "name": "WASDArrows",
+                    "name": "2DMovement",
                     "type": "Button",
                     "id": "666ac27e-2b96-437f-8ee7-cfd66aa6c5a0",
                     "expectedControlType": "Button",
@@ -22,7 +22,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -33,7 +33,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -44,7 +44,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -55,7 +55,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -66,7 +66,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -77,7 +77,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -88,7 +88,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -99,7 +99,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -110,7 +110,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "WASDArrows",
+                    "action": "2DMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
