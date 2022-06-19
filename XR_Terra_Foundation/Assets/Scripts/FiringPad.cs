@@ -12,7 +12,7 @@ public class FiringPad : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player triggered this firing pad.");
+            //Debug.Log("Player triggered this firing pad.");
             GameObject spawnedProjectile = Instantiate(projectilePrefab, spawnpoint.position, spawnpoint.rotation);
             spawnedProjectile.GetComponent<Rigidbody>().AddForce(spawnedProjectile.transform.forward * projectileForce, ForceMode.VelocityChange); 
         }
