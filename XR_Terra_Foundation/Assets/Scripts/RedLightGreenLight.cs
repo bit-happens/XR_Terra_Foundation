@@ -52,14 +52,20 @@ public class RedLightGreenLight : MonoBehaviour
         {
             if (canMove)
             {
-                yield return new WaitForSeconds(Random.Range(minRedTime, maxRedTime));
+                // Set the light to red, because it is currently green
                 canMove = false;
+                // Change the stoplight material to red 
+                yield return new WaitForSeconds(Random.Range(minRedTime, maxRedTime));
+               
             }
 
             else
             {
-                yield return new WaitForSeconds(Random.Range(minGreenTime, maxGreenTime));
+                // Set the light to green, because it is currently red
                 canMove = true;
+                // Change the stoplight material to green
+                yield return new WaitForSeconds(Random.Range(minGreenTime, maxGreenTime));
+                
             }
         }
     }
