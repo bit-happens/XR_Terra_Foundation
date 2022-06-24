@@ -6,17 +6,19 @@ using UnityEngine.InputSystem;
 public class RedLightGreenLight : MonoBehaviour
 {
     public float speed;
+    Vector3 movement;
+
+    public float minRedTime, maxRedTime, minGreenTime, maxGreenTime;
     public bool canMove;
     public bool wonGame;
-    public float minRedTime, maxRedTime, minGreenTime, maxGreenTime;
-    Vector3 movement; 
+
+    public Transform respawnPoint; 
 
     // Start is called before the first frame update
     void Start()
     {
-        canMove = true;
+        canMove = false;
         wonGame = false;
-
         StartCoroutine(RLGL());
     }
 
@@ -29,7 +31,19 @@ public class RedLightGreenLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += movement * speed * Time.deltaTime; 
+        if(canMove)
+        {
+            transform.position += movement * speed * Time.deltaTime;
+        }
+        else
+        {
+            if(movement.magnitude > .1f)
+            {
+                // teleport player back to the start
+                transform.position = respawnPoint.position;
+            }
+        }
+         
     }
 
     IEnumerator RLGL()
