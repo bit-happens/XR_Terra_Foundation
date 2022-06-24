@@ -9,8 +9,11 @@ public class RedLightGreenLight : MonoBehaviour
     Vector3 movement;
 
     public float minRedTime, maxRedTime, minGreenTime, maxGreenTime;
-    public bool canMove;
     public bool wonGame;
+    public bool canMove;
+    bool reactionTimeActive;
+    public float reactionTime = 1f; 
+    
 
     public Transform respawnPoint;
     public MeshRenderer stoplight; 
@@ -19,8 +22,9 @@ public class RedLightGreenLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canMove = false;
         wonGame = false;
+        canMove = false;
+        reactionTimeActive = false; 
         StartCoroutine(RLGL());
     }
 
@@ -39,7 +43,7 @@ public class RedLightGreenLight : MonoBehaviour
         }
         else
         {
-            if(movement.magnitude > .1f)
+            if(movement.magnitude > .1f && !reactionTimeActive)
             {
                 // teleport player back to the start
                 transform.position = respawnPoint.position;
@@ -56,7 +60,8 @@ public class RedLightGreenLight : MonoBehaviour
             {
                 // Set the light to red, because it is currently green
                 canMove = false;
-                stoplight.sharedMaterial.color = redColor; 
+                stoplight.sharedMaterial.color = redColor;
+                StartCoroutine(ReactionTime());
                 yield return new WaitForSeconds(Random.Range(minRedTime, maxRedTime));
                
             }
@@ -70,6 +75,13 @@ public class RedLightGreenLight : MonoBehaviour
                 
             }
         }
+    }
+
+    IEnumerator ReactionTime()
+    {
+        reactionTimeActive = true;
+        yield return new WaitForSeconds(reactionTime);
+        reactionTimeActive = false; 
     }
 
 }

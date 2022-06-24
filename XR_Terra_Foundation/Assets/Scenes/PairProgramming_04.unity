@@ -826,8 +826,9 @@ MonoBehaviour:
   maxRedTime: 3
   minGreenTime: 2
   maxGreenTime: 4
-  canMove: 0
   wonGame: 0
+  canMove: 0
+  reactionTime: 0.2
   respawnPoint: {fileID: 645820526}
   stoplight: {fileID: 1212499170}
   redColor: {r: 0.7735849, g: 0.0693307, b: 0.0693307, a: 0}
