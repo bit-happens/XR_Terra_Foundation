@@ -17,7 +17,7 @@ public class RedLightGreenLight : MonoBehaviour
         canMove = true;
         wonGame = false;
 
-        StartCoroutine(StopLightTimer());
+        StartCoroutine(RLGL());
     }
 
     public void OnMovement(InputAction.CallbackContext context) 
@@ -32,20 +32,20 @@ public class RedLightGreenLight : MonoBehaviour
         transform.position += movement * speed * Time.deltaTime; 
     }
 
-    IEnumerator StopLightTimer()
+    IEnumerator RLGL()
     {
         while(!wonGame)
         {
-            if (!canMove)
+            if (canMove)
             {
                 yield return new WaitForSeconds(Random.Range(minRedTime, maxRedTime));
-                canMove = true;
+                canMove = false;
             }
 
             else
             {
                 yield return new WaitForSeconds(Random.Range(minGreenTime, maxGreenTime));
-                canMove = false;
+                canMove = true;
             }
         }
     }
