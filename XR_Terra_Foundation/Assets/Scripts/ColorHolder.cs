@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class ColorHolder : MonoBehaviour
 {
-   
+    public Color heldColor; 
 }

@@ -11,11 +11,11 @@ public class ChangeColorOnRenderers : MonoBehaviour
         
     }
 
-    public void ChangeColor(Color passedColor)
+    public void ChangeColor(ColorHolder colorHolder)
     {
         foreach (MeshRenderer rend in renderersToChange)
         {
-            rend.material.color = passedColor; 
+            rend.material.color = colorHolder.heldColor; 
         }
 
     }
