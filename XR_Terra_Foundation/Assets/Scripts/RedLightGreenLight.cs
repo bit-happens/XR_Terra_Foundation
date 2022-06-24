@@ -12,7 +12,9 @@ public class RedLightGreenLight : MonoBehaviour
     public bool canMove;
     public bool wonGame;
 
-    public Transform respawnPoint; 
+    public Transform respawnPoint;
+    public MeshRenderer stoplight; 
+    public Color redColor, greenColor; 
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +56,7 @@ public class RedLightGreenLight : MonoBehaviour
             {
                 // Set the light to red, because it is currently green
                 canMove = false;
-                // Change the stoplight material to red 
+                stoplight.sharedMaterial.color = redColor; 
                 yield return new WaitForSeconds(Random.Range(minRedTime, maxRedTime));
                
             }
@@ -63,7 +65,7 @@ public class RedLightGreenLight : MonoBehaviour
             {
                 // Set the light to green, because it is currently red
                 canMove = true;
-                // Change the stoplight material to green
+                stoplight.sharedMaterial.color = greenColor;
                 yield return new WaitForSeconds(Random.Range(minGreenTime, maxGreenTime));
                 
             }
