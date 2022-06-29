@@ -1,51 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; 
+using UnityEngine.InputSystem;
 
 public class OculusHands : MonoBehaviour
 {
-    public InputActionReference triggerAction;
-    public InputActionReference gripAction;
+    public InputActionReference gripReference;
+    public InputActionReference triggerReference;
     Animator anim; 
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
-        triggerAction.action.started += OnTriggerPressed;
-        triggerAction.action.canceled += OnTriggerUnpressed;
-        gripAction.action.started += OnGripPressed;
-        gripAction.action.canceled += OnGripUnpressed;
+        triggerReference.action.started += GripStarted;
+        triggerReference.action.canceled += GripCanceled;
+        gripReference.action.started += TriggerStarted;
+        gripReference.action.canceled += TriggerCanceled;
+        
 
     }
 
-    void OnTriggerPressed(InputAction.CallbackContext ctx)
+    private void OnDestroy()
+    {
+        triggerReference.action.started -= GripStarted;
+        triggerReference.action.canceled -= GripCanceled;
+        gripReference.action.started -= TriggerStarted;
+        gripReference.action.canceled -= TriggerCanceled;
+
+    }
+
+    void TriggerStarted(InputAction.CallbackContext context)
     {
        
         anim.SetBool("TriggerPressed", true);
-        Debug.Log("Trigger pressed!");
+        // Debug.Log("Trigger pressed!");
     }
 
-    void OnTriggerUnpressed(InputAction.CallbackContext ctx)
+    void TriggerCanceled(InputAction.CallbackContext context)
     {
 
         anim.SetBool("TriggerPressed", false);
-        Debug.Log("Trigger unpressed!");
+        // Debug.Log("Trigger unpressed!");
     }
 
-    void OnGripPressed(InputAction.CallbackContext ctx)
+    void GripStarted(InputAction.CallbackContext context)
     {
 
         anim.SetBool("GripPressed", true);
-        Debug.Log("Grip pressed!");
+        // Debug.Log("Grip pressed!");
     }
 
-    void OnGripUnpressed(InputAction.CallbackContext ctx)
-    {
-
-        anim.SetBool("Grip Pressed", false);
-        Debug.Log("Grip unpressed!");
+    void GripCanceled(InputAction.CallbackContext context)
+    { 
+        anim.SetBool("GripPressed", false);
+        // Debug.Log("Grip unpressed!");
     }
 
 

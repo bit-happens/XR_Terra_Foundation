@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f635b04f9205494393ffce1a68d6c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerAction: {fileID: 0}
-  gripAction: {fileID: 0}
+  gripReference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  triggerReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1001 &78737592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OculusHand-Right
       objectReference: {fileID: 0}
+    - target: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 353a1623192527b42aefea1fc2183d22, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!1 &108298575
@@ -1055,6 +1059,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606281006}
   m_CullTransparentMesh: 1
+--- !u!1 &610293056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 78737592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &610293057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610293056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f635b04f9205494393ffce1a68d6c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gripReference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  triggerReference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &650488503
 GameObject:
   m_ObjectHideFlags: 0
