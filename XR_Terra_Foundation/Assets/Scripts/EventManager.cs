@@ -5,10 +5,18 @@ using UnityEngine.InputSystem;
 
 public class EventManager : MonoBehaviour
 {
+    public event System.Action<float> SpacebarPressed;
+    public float passedFloat; 
 
     public void SpaceBarPress(InputAction.CallbackContext context)
     {
-        Debug.Log("Receive spacebar press with context of: " + context.phase);
+        
+        if (context.performed)
+        {
+            // here is where we call the event
+            SpacebarPressed?.Invoke(passedFloat); 
+
+        }
 
     }
 
