@@ -1422,6 +1422,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 903658163592377143, guid: a652cb7dd4bfdaf43a02dcc16f2168dd, type: 3}
   m_PrefabInstance: {fileID: 903658163909841009}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &816675485 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2395046106370504874, guid: 7c0cd2f233ef2f9439f8f2c756ef860a, type: 3}
+  m_PrefabInstance: {fileID: 438692673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &880286918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3410,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 544147350530962538, guid: 06d9d9963437fe14eaa6d4c54806c792, type: 3}
   m_PrefabInstance: {fileID: 1383070573}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1453052010 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2395046106370504876, guid: 7c0cd2f233ef2f9439f8f2c756ef860a, type: 3}
+  m_PrefabInstance: {fileID: 438692673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1525688865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,6 +4192,9 @@ MonoBehaviour:
   renderersToChange:
   - {fileID: 1350096766}
   - {fileID: 1621952363}
+  - {fileID: 2130342506}
+  - {fileID: 816675485}
+  - {fileID: 1453052010}
 --- !u!95 &2018559999
 Animator:
   serializedVersion: 3
@@ -4399,6 +4412,11 @@ GameObject:
 --- !u!4 &2130342505 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2395046106368080452, guid: 7c0cd2f233ef2f9439f8f2c756ef860a, type: 3}
+  m_PrefabInstance: {fileID: 438692673}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2130342506 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2395046106370504868, guid: 7c0cd2f233ef2f9439f8f2c756ef860a, type: 3}
   m_PrefabInstance: {fileID: 438692673}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &2130342508
