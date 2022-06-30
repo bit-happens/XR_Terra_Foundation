@@ -2016,8 +2016,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2018560000}
-        m_TargetAssemblyTypeName: CycleDrivingAnimationState, Assembly-CSharp
+      - m_Target: {fileID: 2018560001}
+        m_TargetAssemblyTypeName: CarAnimation, Assembly-CSharp
         m_MethodName: ToggleDriving
         m_Mode: 1
         m_Arguments:
@@ -4225,6 +4225,7 @@ GameObject:
   - component: {fileID: 2018559998}
   - component: {fileID: 2018559999}
   - component: {fileID: 2018560000}
+  - component: {fileID: 2018560001}
   m_Layer: 0
   m_Name: CarModel
   m_TagString: Untagged
@@ -4297,9 +4298,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018559996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 312a9c56c3c6a584aaf803a7da60df45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2018560001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018559996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fb8fd5e2357c242984597dbbe04b47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2033152990
