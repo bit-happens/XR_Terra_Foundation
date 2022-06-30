@@ -17,7 +17,7 @@ public class TimeOfDay : MonoBehaviour
 
     public void RotateSun(Slider passedSlider)
     {
-        float percent = (passedSlider.value - passedSlider.maxValue) / (passedSlider.maxValue - passedSlider.minValue);
+        float percent = (passedSlider.value - passedSlider.minValue) / (passedSlider.maxValue - passedSlider.minValue);
         // Debug.Log("percent has a value of: " + percent);
 
         directionalLight.color = lightColor.Evaluate(percent);
